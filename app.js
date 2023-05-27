@@ -1,5 +1,6 @@
 const btn = document.getElementById("btn")
 const inpt = document.getElementById("inputt")
+const deg = String.fromCodePoint(8451);
 
 let getData = () =>{
     const inputt = document.getElementById("inputt").value
@@ -10,13 +11,13 @@ let getData = () =>{
         ).then((response) =>{
             return response.json()
         }).then((data) =>{
-           screen.innerHTML = inputt + " Temperature: " + data.main.temp + "C"
+           screen.innerHTML = inputt + " Temperature: " + data.main.temp + deg
            screen1.innerHTML = "There is a "+ data.weather[0].description + " " + " in " + inputt + " presently"
         }).catch((err) =>{
         console.log(err)
     })
-}
 
+}
 
 btn.addEventListener("click", getData)
 inpt.addEventListener("change", getData)
