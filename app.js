@@ -11,7 +11,7 @@ let getData = () =>{
         ).then((response) =>{
             return response.json()
         }).then((data) =>{
-           screen.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">` + inputt + " Temperature: " + data.main.temp + deg + `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">`
+           screen.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">` + "    "+ inputt + " Temperature: " + data.main.temp + deg + `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">`
            screen1.innerHTML = "There is a "+ data.weather[0].description + " " + " in " + inputt + " presently"
         }).catch((err) =>{
         console.log(err)
